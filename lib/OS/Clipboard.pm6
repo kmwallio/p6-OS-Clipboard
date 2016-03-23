@@ -23,13 +23,14 @@ module OS::Clipboard {
 
   sub clipboard-slash($text) {
     my $str = $text;
+    $str ~~ s:g/\\/\\\\/;
     $str ~~ s:g/\"/\\"/;
     return $str;
   }
 
   sub clipboard-deslash($text) {
     my $str = $text;
-    $str ~~ s:g/\\\"/"/;
+    $str ~~ s:g/\\\"/\"/;
     return $str;
   }
 
