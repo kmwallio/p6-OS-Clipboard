@@ -23,3 +23,7 @@ use OS::Clipboard;
 
 clipboard-paste();
 ```
+
+## TODO
+
+Add support for arbitrary content...  Escape strings...
