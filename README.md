@@ -1,6 +1,6 @@
 # OS::Clipboard
 
-Manipulate the clipboard from your Perl 6 app. ![](https://travis-ci.org/kmwallio/p6-OS-Clipboard.svg?branch=master)
+Manipulate the clipboard from your Perl 6 app. [![Build Status](https://travis-ci.org/kmwallio/p6-OS-Clipboard.svg?branch=master)](https://travis-ci.org/kmwallio/p6-OS-Clipboard)
 
 ## Installation
 
