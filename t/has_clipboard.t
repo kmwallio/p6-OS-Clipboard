@@ -5,3 +5,4 @@ use OS::Clipboard;
 ok clipboard-present() == True, "Clipboard present";
 
 done-testing;
+exit;
