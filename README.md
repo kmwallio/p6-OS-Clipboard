@@ -21,9 +21,13 @@ Take something out of the clipboard.
 use v6;
 use OS::Clipboard;
 
-clipboard-paste();
+my $content = clipboard-paste();
 ```
 
 ## TODO
 
 Add support for arbitrary content...  Escape strings...
+
+## Acknowledgements
+
+* [File::Which](https://github.com/azawawi/perl6-file-which)

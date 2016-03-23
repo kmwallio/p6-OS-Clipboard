@@ -1,0 +1,13 @@
+{
+  "perl" : "6.*",
+  "name" : "OS::Clipboard",
+  "version" : "0.0.1",
+  "description" : "Access the Clipboard from Perl 6.",
+  "authors" : [ "KM Wallio" ],
+  "provides" : {
+      "OS::Clipboard" : "lib/OS/Clipboard.pm6"
+  },
+  "depends" : ["File::Which"],
+  "resources" : [ ],
+  "source-url" : "git://github.com/kmwallio/p6-OS-Clipboard.git"
+}

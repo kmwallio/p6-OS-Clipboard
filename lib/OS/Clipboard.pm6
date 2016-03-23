@@ -9,7 +9,7 @@ module OS::Clipboard {
   constant WIN_CLIPBOARD = 'clip';
   constant LIN_CLIPBOARD = 'xclip';
   constant LIN_PASTEBOARD = 'xclip -o';
-  my $win_pasteboard; # Hack for windows...
+  my $win_pasteboard = ""; # Hack for windows...
 
   sub clipboard-current() {
     if (IS_WIN) {
@@ -19,6 +19,18 @@ module OS::Clipboard {
     } else {
       return LIN_CLIPBOARD;
     }
+  }
+
+  sub clipboard-slash($text) {
+    my $str = $text;
+    $str ~~ s:g/\"/\\"/;
+    return $str;
+  }
+
+  sub clipboard-deslash($text) {
+    my $str = $text;
+    $str ~~ s:g/\\\"/"/;
+    return $str;
   }
 
   sub clipboard-present() is export {
@@ -32,7 +44,7 @@ module OS::Clipboard {
   }
 
   sub clipboard-copy(Str $content) is export {
-    my @command = 'echo', $content, '|', clipboard-current();
+    my @command = 'echo "', clipboard-slash($content), '"|', clipboard-current();
     my $result = shell @command.join(' ');
     $win_pasteboard = $content;
     return $result;
