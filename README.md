@@ -4,6 +4,16 @@ Manipulate the clipboard from your Perl 6 app.
 
 ## Installation
 
+Requires xclip (Linux), pbcopy (OS X), or clip (Windows).
+
+Ubuntu: `sudo apt-get install xclip`
+
+```
+panda --notests install git://github.com/kmwallio/p6-OS-Clipboard.git
+```
+
+*--notests for now.  Attempting to install over SSH halts during tests.*
+
 ## Usage
 
 Put something in the clipboard.
@@ -31,6 +41,7 @@ my $content = clipboard-paste();
    * Improve tests
  * Properly escape strings...
  * Figure out proper Windows support...
+ * pod comments
 
 ## Acknowledgements
 
