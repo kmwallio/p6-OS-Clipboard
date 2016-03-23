@@ -1,7 +1,7 @@
 sudo: true
 before_install:
   - "export DISPLAY=:99.0"
-  - "sudo apt-get install xclip xsel --no-install-recommends --yes"
+  - "sudo apt-get install xclip --no-install-recommends --yes"
   - "sh -e /etc/init.d/xvfb start"
 language: perl6
 perl6:
